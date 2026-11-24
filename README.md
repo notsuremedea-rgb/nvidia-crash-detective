@@ -34,6 +34,12 @@ Repeated failures are latched until a valid sample arrives. Queries have a three
 
 In my testing, changing **NVIDIA Control Panel → Manage 3D Settings → Global Settings → Preferred graphics processor** from Auto-select to **High-performance NVIDIA processor** made clock readings more consistent. That is an observation from my laptop, not a confirmed cause or a guaranteed fix. The option may not appear on every system, and Windows graphics preferences can affect GPU selection. Detective does not change the setting for you.
 
+### Cannot find NVIDIA Control Panel?
+
+Search the Windows Start menu for **NVIDIA Control Panel**. It is separate from the NVIDIA app. If it is missing after a driver installation, install the official [NVIDIA Control Panel from Microsoft Store](https://www.microsoft.com/store/apps/9NF8H0H7WMLT), then open it from Start. [NVIDIA's installation guidance](https://nvidia.custhelp.com/app/answers/detail/a_id/4733/) describes this for DCH drivers.
+
+Look under **Manage 3D Settings → Global Settings → Preferred graphics processor** for **High-performance NVIDIA processor**, then click Apply. This is the setting I tested; availability depends on the system. If it is absent, do not assume a similarly named power-management setting is equivalent. Detective works without changing this preference.
+
 ## Alongside Goblin Governor
 
 Detective monitors; [Goblin Governor](https://github.com/notsuremedea-rgb/goblin-governor) controls supported clock settings. They are separate tools.
