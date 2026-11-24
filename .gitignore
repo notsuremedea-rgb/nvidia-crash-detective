@@ -1,0 +1,11 @@
+bin/
+dist/
+Logs/
+**/Logs/
+*.csv
+*.log
+*.cer
+*.pfx
+*.key
+*.exe
+*.zip
